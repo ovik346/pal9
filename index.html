@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet" />
+    <title>NativeScript</title>
+
+    <meta
+      name="description"
+      content="Empower JavaScript with native APIs. Liberate your development by using Android, iOS, visionOS... APIs directly without leaving your love of JavaScript."
+    />
+    <script>
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://media.bitterbrains.com/main.js?from=NSCRIPT&type=top';
+      document.head.appendChild(script);
+    </script>
+    <script>
+      // Apply dark mode before first paint to prevent flash
+      (function () {
+        try {
+          localStorage.removeItem('ns-theme');
+        } catch (e) {} // clear legacy key
+        var session = null;
+        try {
+          session = sessionStorage.getItem('ns-theme');
+        } catch (e) {}
+        var dark = session === 'dark' || (!session && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+      })();
+    </script>
+    <style>
+      :root {
+        --page-bg: #ffffff;
+        --hero-bg: #eff4ff;
+        --hero-bg-2: #ffffff;
+        --hero-spot-1: rgba(79, 70, 229, 0.18);
+        --hero-spot-2: rgba(34, 211, 238, 0.12);
+      }
+      [data-theme='light'] {
+        --page-bg: #ffffff;
+        --text: #0a0a0a;
+      }
+      [data-theme='dark'] {
+        --page-bg: #0b0f19;
+        --text: #e5e7eb;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #e5e7eb;
+          --hero-bg: #0b0f19;
+          --hero-bg-2: #0f1529;
+          --hero-spot-1: rgba(79, 70, 229, 0.45);
+          --hero-spot-2: rgba(34, 211, 238, 0.35);
+        }
+      }
+    </style>
+  <script type="module" crossorigin src="/assets/app.ee7c3e71.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.eda5f43a.js">
+  <link rel="stylesheet" href="/assets/app.12fa558d.css">
+<script data-cfasync="false" nonce="c93a1483-07d9-42a7-8102-aedaa1ca7989">try{(function(w,d){!function(j,k,l,m){if(j.zaraz)console.error("zaraz is loaded twice");else{j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz._v="5884";j.zaraz._n="c93a1483-07d9-42a7-8102-aedaa1ca7989";j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const t of Object.entries(Object.entries(dataLayer).reduce((u,v)=>({...u[1],...v[1]}),{})))zaraz.set(t[0],t[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const w=j.zaraz.q.shift();j[l].q.push(w)}r.defer=!0;for(const x of[localStorage,sessionStorage])Object.keys(x||{}).filter(z=>z.startsWith("_zaraz_")).forEach(y=>{try{j[l]["z_"+y.slice(7)]=JSON.parse(x.getItem(y))}catch{j[l]["z_"+y.slice(7)]=x.getItem(y)}});r.referrerPolicy="origin";r.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async A=>new Promise(B=>{if(A){A.e&&A.e.forEach(C=>{try{const D=d.querySelector("script[nonce]"),E=D?.nonce||D?.getAttribute("nonce"),F=d.createElement("script");E&&(F.nonce=E);F.innerHTML=C;F.onload=()=>{d.head.removeChild(F)};d.head.appendChild(F)}catch(G){console.error(`Error executing script: ${C}\n`,G)}});Promise.allSettled((A.f||[]).map(H=>fetch(H[0],H[1])))}B()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+  <body class="overflow-y-scroll font-sans antialiased">
+    <div id="app"></div>
+    
+  <!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b352522b05a1425e890ba7619f19ba6f"}'></script><!-- Cloudflare Pages Analytics --></body>
+</html>
